@@ -1,41 +1,42 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab One
+      Yoka
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-card class="welcome-card">
-      <img src="/assets/shapes.svg" alt="" />
+
+    
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <lottie-player
+      src="https://assets2.lottiefiles.com/packages/lf20_LfkCsp.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay >
+  </lottie-player>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player src="https://assets1.lottiefiles.com/temp/lf20_sxj3pp.json" background="transparent" speed="1"
+      style="width: 300px; height: 300px;" loop autoplay>
+    </lottie-player>
+  
+    <ion-card *ngIf="product"> <!-- Ajoute un élément dans le DOM s'il a le produit (si produit est vrai) contairement à hidden qui le cache tant que ce n'est pas vrai-->
       <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
-      </ion-card-content>
+        {{ product.product_name }}
+        </ion-card-header>
     </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
+
+    <!-- Afficher une image
+    <ion-item *ngIf="product">
+    <ion-imp [src]={{product.image_ingredients_thumb_url}}>
+    </ion-imp>
+  </ion-item>
+  -->
+
+  <!-- fab placed to the top start -->
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="fakeScan()">
+      <ion-icon name="barcode"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
 </ion-content>
