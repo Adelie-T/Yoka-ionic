@@ -12,6 +12,8 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { defineCustomElements } from '@teamhive/lottie-player/loader';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+
 
 defineCustomElements(window);
 
@@ -22,6 +24,7 @@ defineCustomElements(window);
   providers: [
     StatusBar,
     SplashScreen,
+    BarcodeScanner,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

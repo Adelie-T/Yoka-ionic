@@ -9,23 +9,19 @@
 <ion-content>
 
     
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <lottie-player
-      src="https://assets2.lottiefiles.com/packages/lf20_LfkCsp.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay >
-  </lottie-player>
-
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <lottie-player src="https://assets1.lottiefiles.com/temp/lf20_sxj3pp.json" background="transparent" speed="1"
       style="width: 300px; height: 300px;" loop autoplay>
     </lottie-player>
   
-    <ion-card *ngIf="product"> <!-- Ajoute un élément dans le DOM s'il a le produit (si produit est vrai) contairement à hidden qui le cache tant que ce n'est pas vrai-->
+    <ion-card *ngIf="product"> <!-- Ajoute un élément dans le DOM s'il a le produit (si produit est vrai) contairement à hidden qui le cache tant que ce n'est pas vrai -->
       <ion-card-header>
         {{ product.product_name }}
         </ion-card-header>
     </ion-card>
+  
 
-    <!-- Afficher une image
+    <!-- Afficher une image (marche pas)
     <ion-item *ngIf="product">
     <ion-imp [src]={{product.image_ingredients_thumb_url}}>
     </ion-imp>
@@ -34,7 +30,7 @@
 
   <!-- fab placed to the top start -->
   <ion-fab vertical="bottom" horizontal="center" slot="fixed">
-    <ion-fab-button (click)="fakeScan()">
+    <ion-fab-button (click)="scanAction()">
       <ion-icon name="barcode"></ion-icon>
     </ion-fab-button>
   </ion-fab>

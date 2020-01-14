@@ -6,7 +6,7 @@ export class Product implements ProductInterface {
     public nova_groups: number;
     public code: string;
     public product_name: string;
-    public image_ingredients_thumb_url : string; 
+    // public image_ingredients_thumb_url : string; 
     
     //on lui demande parmi l'objet JSON 'Product' de récuperer des attributs : 
     public deserialize(product : any) : Product {
